@@ -61,7 +61,13 @@ _tools_ -> _Global Opotions_ -> _Spelling_ -> _desmarque a caixa use real time s
 ## Uma análise sobre as três versões do modelo
 
 
-### Criacação de uma variavel artificial através de variaveis reais
+### Primeira versão do modelo
+* Variavel artificial _insuficiencia renal binaria_ criada
+* Adição de uma variável aleatória
+* Valor de CP: 0.03
+* acurácia: 0.8719
+* sensitividade: 0.8021
+* especificidade: 0.9038
 
 
 
