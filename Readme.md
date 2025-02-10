@@ -10,7 +10,7 @@ O projeto tem a intenção de utilizar e incentivar o uso de machine learning pa
 
 [Rstudio na versão 2024.12.0+467 ou superior](https://posit.co/download/rstudio-desktop/)
 
-Arquivo contendo dataset traduzido disponível nesse mesmo repositório [(Dataset original extraído do Kaggle)](https://www.kaggle.com/datasets/aadarshvelu/heart-failure-prediction-clinical-records)
+Arquivo contendo dataset traduzido (_heart_failure_clinical_records.csv_) disponível nesse mesmo repositório [(Dataset original extraído do Kaggle)](https://www.kaggle.com/datasets/aadarshvelu/heart-failure-prediction-clinical-records)
 
 ## Utilização do codigo no Rstudio
 Clone o projeto na sua máquina utilizando o git bash:
@@ -68,6 +68,8 @@ _tools_ -> _Global Opotions_ -> _Spelling_ -> _desmarque a caixa use real time s
 * acurácia: 0.8719
 * sensitividade: 0.8021
 * especificidade: 0.9038
+
+![](https://github.com/LucasSilvaBraga/projeto-de-machine-learning-para-a-prevencao-de-obitos-por-ataques-cardiacos/blob/main/src/Assets/PlotComVariavelTempo.png)
 
 
 
