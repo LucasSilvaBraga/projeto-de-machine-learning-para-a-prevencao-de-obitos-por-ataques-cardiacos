@@ -69,9 +69,65 @@ _tools_ -> _Global Opotions_ -> _Spelling_ -> _desmarque a caixa use real time s
 * sensitividade: 0.8021
 * especificidade: 0.9038
 
-![](https://github.com/LucasSilvaBraga/projeto-de-machine-learning-para-a-prevencao-de-obitos-por-ataques-cardiacos/blob/main/src/Assets/PlotComVariavelTempo.png)
+![](src/Assets/PlotComVariavelTempo.png)
 
+- Valor de CP : 0.1
+- acurácia: 0.8472
+- Sensitividade: 0.6043
+- Especificidade: 0.9582
 
+![](src/Assets/PlotComVariavelTempo2.png)
 
+É possível verificar que, mesmo mudando os valores do parâmetro de complexidade a variável “tempo” continua sendo a mais relevante das condições que podem levar um paciente à óbito.
 
+### Segunda versão do modelo
+- Exclusão da variável tempo
+- Variável artificial creatina insuficiência renal binaria criada
+- Adição de uma varável aleatória
+- Valor de CP: 0.03
+- Acurácia: 0.8319
+- Sensibilidade: 0.7085
+- Especificidade: 0.8882
 
+![](src/Assets/PlotSemVariavelTempo.png)
+
+- Exclusão da variável aleatória
+- Exclusão da variável tempo
+- Variável artificial creatina insuficiência renal binaria criada
+- Valor de CP: 0.03
+- Acurácia: 0.8319
+- Sensibilidade: 0.7085
+- Especificidade: 0.8882
+
+![](src/Assets/PlotSemVariavelTempoSemAleatoria.png)
+
+Inicialmente houve a exclusão da variável “tempo” que levou à uma distribuição de importância das variáveis de maneira mais igualitária. Logo após, a variável aleatória foi também excluída, porém, a presença dessa de mostrou irrelevante visto que os valores de acurácia, sensitividade e especificidade não sofreram alterações
+
+### Terceira versão do modelo
+
+- Exclusão da variável aleatória
+- Exclusão da variável tempo
+- Variável artificial creatina insuficiência renal binaria criada
+- Ponto de corte para considerar que um paciente virá a óbito diminuído
+- Valor de CP: 0.03
+- Acurácia: 0.7999
+- Sensibilidade: 0.7894
+- Especificidade 0.8047
+
+![](src/Assets/AumentoSensibilidadePontoDeCorte.png)
+
+- Exclusão da variável aleatória
+- Exclusão da variável tempo
+- Variável artificial creatina insuficiência renal binaria criada
+- Ponto de corte para considerar que um paciente virá a óbito diminuído
+- Aumento do peso de erros em falsos negativos
+- Valor de CP: 0.03
+- Acurácia: 0.7939
+- Sensibilidade: 0.8723
+- Especificidade 0.7570
+
+![](src/Assets/AumentoSensibilidadePontoDeCortePesos.png)
+
+Um modelo com maior sensibilidade é um modelo que gera menos falsos negativos. Em modelos gerados para prever a ocorrência de doenças de alto índice de contágio em um paciente, em teoria, é melhor que esse tenha uma sensibilidade mais elevada. Visto que os malefícios de um falso negativo são maiores que de um falso positivo.
+
+Nessa versão, a lógica de que um falso negativo é pior que um falso positivo foi usada. Ou seja, mesmo que o algorítimo indique, ainda que de maneira errônea, que um paciente virá a óbito por conta de um ataque cardiáco, é melhor que o paciente sofra as consequências dos metodos utilizados para previnir um infarto do que esse vir a óbito.
